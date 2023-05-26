@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mijn website</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+    
+    .play-button {
+      display: inline-block;
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: #ff4c4c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
+    
+    video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welkom bij mijn geweldige website!</h1>
+    <button class="play-button" onclick="playVideo()">klik hier</button>
+    <div id="videoContainer"></div>
+  </div>
+  <script>
+    function playVideo() {
+      var videoContainer = document.getElementById("videoContainer");
+      var video = '<video width="560" height="315" controls autoplay><source src="video.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
+      videoContainer.innerHTML = video;
+      videoContainer.style.display = "block";
+    }
+  </script>
+</body>
+</html>
